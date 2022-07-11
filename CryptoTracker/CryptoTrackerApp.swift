@@ -1,17 +1,15 @@
-//
-//  CryptoTrackerApp.swift
-//  CryptoTracker
-//
-//  Created by shams on 2022-07-08.
-//
-
 import SwiftUI
 
 @main
 struct CryptoTrackerApp: App {
+    @StateObject private var vm = HomeViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HomeView()
+                    .navigationBarHidden(true)
+            }
+            .environmentObject(vm)
         }
     }
 }
