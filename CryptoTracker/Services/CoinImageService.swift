@@ -24,7 +24,7 @@ class CoinImageService {
             print("retrieved image from file manager..")
         } else {
             downloadCoinImage()
-            print("downloading image now")
+//            print("downloading image now")
         }
     }
     
