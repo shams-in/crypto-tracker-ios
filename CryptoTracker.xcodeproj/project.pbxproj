@@ -22,6 +22,9 @@
 		D5AB57ED287F1DBB00DD8864 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AB57EC287F1DBB00DD8864 /* PortfolioDataService.swift */; };
 		D5AB57EF287F743200DD8864 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AB57EE287F743200DD8864 /* HapticManager.swift */; };
 		D5AB57F4287F804E00DD8864 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AB57F3287F804E00DD8864 /* DetailView.swift */; };
+		D5AB57F6287F89F600DD8864 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AB57F5287F89F600DD8864 /* Binding.swift */; };
+		D5AB57F8287FA5E300DD8864 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AB57F7287FA5E300DD8864 /* Navigation.swift */; };
+		D5AB57FA287FB7C800DD8864 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AB57F9287FB7C800DD8864 /* HelloView.swift */; };
 		D5C0796C287B96A200084C30 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C0796B287B96A200084C30 /* HomeView.swift */; };
 		D5C07971287B97E600084C30 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C07970287B97E600084C30 /* CircleButtonView.swift */; };
 		D5C07973287B9C1500084C30 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C07972287B9C1500084C30 /* View.swift */; };
@@ -60,6 +63,9 @@
 		D5AB57EC287F1DBB00DD8864 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		D5AB57EE287F743200DD8864 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		D5AB57F3287F804E00DD8864 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D5AB57F5287F89F600DD8864 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		D5AB57F7287FA5E300DD8864 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		D5AB57F9287FB7C800DD8864 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
 		D5C0796B287B96A200084C30 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D5C07970287B97E600084C30 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		D5C07972287B9C1500084C30 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -140,6 +146,8 @@
 				D5C0797B287BC63B00084C30 /* PreviewProvider.swift */,
 				D5C0797D287BC9F900084C30 /* Double.swift */,
 				D5C07992287CA0D900084C30 /* UIApplication.swift */,
+				D5AB57F5287F89F600DD8864 /* Binding.swift */,
+				D5AB57F7287FA5E300DD8864 /* Navigation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				D5AB57F3287F804E00DD8864 /* DetailView.swift */,
+				D5AB57F9287FB7C800DD8864 /* HelloView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,12 +373,15 @@
 				D525455228791161005B96A0 /* Color.swift in Sources */,
 				D5AB57EB287F1D0800DD8864 /* PortfolioContainer.xcdatamodeld in Sources */,
 				D5C07989287BE6BC00084C30 /* CoinImageView.swift in Sources */,
+				D5AB57F8287FA5E300DD8864 /* Navigation.swift in Sources */,
+				D5AB57F6287F89F600DD8864 /* Binding.swift in Sources */,
 				D5AB57F4287F804E00DD8864 /* DetailView.swift in Sources */,
 				D5C0797E287BC9F900084C30 /* Double.swift in Sources */,
 				D5C0797C287BC63B00084C30 /* PreviewProvider.swift in Sources */,
 				D5C0798B287BFD9E00084C30 /* CoinImageService.swift in Sources */,
 				D5C07986287BE20100084C30 /* NetworkingManager.swift in Sources */,
 				D5AB57EF287F743200DD8864 /* HapticManager.swift in Sources */,
+				D5AB57FA287FB7C800DD8864 /* HelloView.swift in Sources */,
 				D5AB57E4287E323C00DD8864 /* PortfolioView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

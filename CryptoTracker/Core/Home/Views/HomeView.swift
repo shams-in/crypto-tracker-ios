@@ -8,7 +8,7 @@ struct HomeView: View {
     @State private var showPortfolioView: Bool = false // new sheet
     
     @State private var selectedCoin: CoinModel? = nil
-    @State private var showDetailView: Bool = false
+//    @State private var showDetailView: Bool = false
     
     var body: some View {
         ZStack {
@@ -38,13 +38,13 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
         }
-        .background(
-            NavigationLink(
-                destination: DetailView(coin: $selectedCoin),
-                isActive: $showDetailView,
-                label: { EmptyView() }
-            )
-        )
+//        .background(
+//            NavigationLink(
+//                destination: DetailView(coin: $selectedCoin),
+//                isActive: $showDetailView,
+//                label: { EmptyView() }
+//            )
+//        )
     }
 }
 
@@ -88,7 +88,7 @@ extension HomeView {
         }
         .padding(.horizontal)
     }
-    
+    	
     private var allCoinsList: some View {
         List {
             ForEach(vm.allCoins) {coin in
@@ -99,11 +99,22 @@ extension HomeView {
                 CoinRowView(coin: coin, showHoldingsColumn: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
                     .onTapGesture {
-                        segue(coin: coin)
+//                        segue(coin: coin)
+                        selectedCoin = coin
                     }
             }
         }
         .listStyle(.plain)
+        /// Whenever `selectedFavorite` is set, a new `FavoriteDetailView` is pushed.
+        .navigationDestination(for: $selectedCoin) { coin in
+//            DetailView(coin: coin)
+            HelloView()
+        }
+        .refreshable {
+            print("Do your refresh work here")
+        }
+//        .ignoresSafeArea(.container, edges: .top)
+//        .navigationBarHidden(true)
     }
     
     private var portfolioCoinsList: some View {
@@ -112,17 +123,22 @@ extension HomeView {
                 CoinRowView(coin: coin, showHoldingsColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
                     .onTapGesture {
-                        segue(coin: coin)
+//                        segue(coin: coin)
+                        selectedCoin = coin
                     }
             }
         }
         .listStyle(.plain)
+        /// Whenever `selectedFavorite` is set, a new `FavoriteDetailView` is pushed.
+        .navigationDestination(for: $selectedCoin) { coin in
+            DetailView(coin: coin)
+        }
     }
     
-    private func segue(coin: CoinModel) {
-        selectedCoin = coin
-        showDetailView.toggle()
-    }
+//    private func segue(coin: CoinModel) {
+//        selectedCoin = coin
+//        showDetailView.toggle()
+//    }
     
     private var columnTitles: some View {
         HStack {
